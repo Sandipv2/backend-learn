@@ -19,6 +19,9 @@ app.use(cookieParser())
 // routes import
 import userRouter from './routes/user.routes.js'
 
+app.get('/', (rq, res) => {
+    res.json({msg: "Hello"})
+})
 
 // routes declarations
 app.use("/api/v1/users", userRouter)
